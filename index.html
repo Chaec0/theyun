@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="종로구 평창동, 북한산 자락의 단 4세대 프라이빗 레지던스. 준공 완료 · 즉시 입주. 문의 02-567-9090">
+<meta property="og:type" content="website">
+<meta property="og:title" content="평창동 더윤 The 潤">
+<meta property="og:description" content="평창동에서 만나는 프라이빗 럭셔리 · 단 4세대 · 준공 완료 즉시 입주">
+<meta name="theme-color" content="#161419">
+<title>평창동 더윤 The 潤</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@200;300;400&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&text=%E6%BD%A4&display=swap">
+<style>
+/* Layout: a quiet lilac-grey page; a WebGL ridge opens it, and the key photographs are depth-mapped so near objects drift against far ones, like a spatial photo. Text sits in a right-weighted column like the catalog. */
+/* One deliberate look: the night palette for every viewer, whatever their device theme. */
+:root{
+  color-scheme:dark;
+  --bg:#161419;
+  --surface:#1F1C23;
+  --ink:#ECE7F1;
+  --muted:#A69FAE;
+  --line:#36313C;
+  --accent:#B3A1C6;
+  --accent-deep:#D9CDE5;
+  --accent-soft:#2A2430;
+  --on-accent:#1A161E;
+  --depth:rgba(0,0,0,.6);
+  --paper:#E9E1D2;
+  --pink:#E0558F;
+  --f-display:"Hahmlet","Noto Serif KR","Apple SD Gothic Neo",serif;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-label:"Jost","Futura","Avenir Next",system-ui,sans-serif;
+  --f-han:"Noto Serif KR","Songti SC",serif;
+  --wrap:1180px;
+  --gut:max(16px, env(safe-area-inset-left, 0px));
+  --gut-r:max(16px, env(safe-area-inset-right, 0px));
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+html,body{overflow-x:clip}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75;font-weight:300;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:var(--gut);padding-right:var(--gut-r)}
+.label{font-family:var(--f-label);font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--accent);font-weight:400}
+h1,h2,h3{font-family:var(--f-display);font-weight:200;line-height:1.25;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(34px,5.4vw,64px)}
+h3{font-size:clamp(22px,2.6vw,30px);font-weight:300}
+p{margin:0}
+.han{font-family:var(--f-han);font-weight:300}
+.num{font-variant-numeric:tabular-nums}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:24px;height:60px}
+.brand{font-family:var(--f-label);font-size:20px;font-weight:400;text-decoration:none;display:flex;align-items:baseline;gap:6px;white-space:nowrap}
+.brand .han{font-size:22px;color:var(--accent)}
+.brand small{font-family:var(--f-body);font-size:12px;color:var(--muted);margin-left:6px;letter-spacing:0}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0 0 0 auto;padding:0}
+.nav ul a{text-decoration:none;font-size:14px;color:var(--muted);font-weight:400}
+.nav ul a:hover{color:var(--ink)}
+.call{display:inline-flex;align-items:center;gap:8px;background:var(--accent-deep);color:var(--bg);text-decoration:none;font-family:var(--f-label);font-weight:500;letter-spacing:.04em;font-size:14px;padding:8px 16px;border-radius:999px;white-space:nowrap}
+@media (max-width:900px){.nav ul{display:none}.call{margin-left:auto}.brand small{display:none}}
+
+/* hero */
+.hero-stage{position:relative;padding-block:72px 0}
+.ridge-box{position:relative;height:clamp(300px,38vw,540px);margin-top:clamp(28px,4vw,56px)}
+#ridge{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 84%,transparent);mask-image:linear-gradient(to bottom,#000 84%,transparent)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.hero-title{font-family:var(--f-label);font-weight:300;font-size:clamp(76px,13vw,168px);line-height:.9;letter-spacing:-.03em;margin:22px 0 0;color:var(--ink);animation:rise 1.1s cubic-bezier(.2,.7,.2,1) both}
+.hero-title .han{color:var(--accent);font-size:1.02em;margin-left:.06em}
+.hero-sub{font-family:var(--f-display);font-weight:300;font-size:clamp(22px,2.6vw,30px);margin-top:26px}
+.hero-side{display:grid;gap:18px;padding-bottom:10px;justify-items:start}
+.hero-side p{color:var(--muted);max-width:30em}
+.status{margin:0;display:grid;grid-template-columns:auto auto;justify-content:start;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.status div{padding:12px 28px 12px 0;display:grid;gap:2px}
+.status div+div{padding-left:28px;border-left:1px solid var(--line)}
+.status dt{font-family:var(--f-label);font-size:10.5px;letter-spacing:.36em;text-transform:uppercase;color:var(--accent)}
+.status dd{margin:0;font-family:var(--f-display);font-weight:300;font-size:19px;color:var(--ink);white-space:nowrap}
+.status em{font-style:normal;color:var(--accent);border-bottom:1px solid var(--accent)}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;text-decoration:none;padding:12px 22px;border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;font-family:inherit}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn:hover{filter:brightness(1.06)}
+@keyframes rise{from{transform:translateY(18px)}to{transform:none}}
+
+/* photo bands; .sp hosts get a depth canvas laid over the photo once WebGL is ready */
+.band{position:relative;margin-top:56px;clip-path:polygon(0 9%,100% 0,100% 91%,0 100%);overflow:hidden}
+.band img{width:100%;height:clamp(320px,62vw,720px);object-fit:cover}
+.band.rev{clip-path:polygon(0 0,100% 9%,100% 100%,0 91%)}
+.hero .band{margin-top:clamp(28px,5vw,72px);clip-path:none;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 76%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 76%,transparent 100%)}
+.hero .band img{height:clamp(440px,70vw,860px)}
+.sp{position:relative}
+.sp canvas{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity .8s ease}
+.sp.live canvas{opacity:1}
+.place{position:absolute;z-index:2;left:max(20px,env(safe-area-inset-left,0px));bottom:16%;display:grid;gap:4px;padding:12px 18px 13px;background:rgba(18,13,24,.2);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);color:#fff;border-radius:2px;text-shadow:0 1px 10px rgba(0,0,0,.5),0 0 2px rgba(0,0,0,.35)}
+.place b{font-family:var(--f-display);font-weight:400;font-size:clamp(17px,2vw,22px);line-height:1.3}
+.place span{font-size:12.5px;opacity:.82;letter-spacing:.02em}
+.hero .place{bottom:30%}
+.band.rev .place{bottom:20%}
+
+section{padding-block:96px}
+.head{display:grid;gap:18px;justify-items:end;text-align:right;margin-bottom:56px}
+.head.left{justify-items:start;text-align:left}
+.lead{font-size:17px;color:var(--muted);max-width:34em}
+
+/* intro */
+.intro .mount{width:min(640px,90%);aspect-ratio:1205/335;margin:48px auto 0;background:var(--accent);-webkit-mask:url(mountain.png) center/contain no-repeat;mask:url(mountain.png) center/contain no-repeat}
+.intro .sun{width:26px;height:26px;border-radius:50%;background:var(--accent-deep);margin:56px auto -6px;transform:translateX(30px)}
+.intro .prose{max-width:34em;margin:56px 0 0 auto;text-align:right;display:grid;gap:22px;font-size:17px}
+
+/* facts */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.fact{padding:26px 20px 28px 0;display:grid;gap:8px;align-content:start;min-width:0}
+.fact+.fact{padding-left:20px;border-left:1px solid var(--line)}
+.fact b{font-family:var(--f-display);font-weight:300;font-size:22px;line-height:1.35}
+.fact span{font-size:14px;color:var(--muted)}
+@media (max-width:860px){.facts{grid-template-columns:1fr 1fr}.fact:nth-child(3){padding-left:0;border-left:0}.fact:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:480px){.facts{grid-template-columns:1fr}.fact,.fact+.fact{padding-left:0;border-left:0}.fact+.fact{border-top:1px solid var(--line)}}
+
+/* captioned photo, used for the neighbourhood photos and gallery tiles */
+.ph{position:relative;margin:0;overflow:hidden;background:var(--line)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph figcaption,.ph .lab{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 11px;background:linear-gradient(to bottom,transparent,rgba(14,10,18,.42));color:#fff;text-align:left;display:grid;gap:1px;text-shadow:0 1px 8px rgba(0,0,0,.55),0 0 2px rgba(0,0,0,.4)}
+.ph b{font-weight:500;font-size:15px;line-height:1.35}
+.ph small{font-size:12px;opacity:.8}
+
+/* location */
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.loc-card{display:grid;gap:14px;align-content:start;min-width:0}
+.loc-card .kicker{display:inline-block;justify-self:start;background:var(--ink);color:var(--bg);font-weight:500;font-size:15px;padding:9px 22px 9px 18px;border-radius:0 22px 0 22px}
+.loc-card ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.loc-card li{padding-left:16px;position:relative;color:var(--muted)}
+.loc-card li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:1px;background:var(--accent)}
+.loc-card li b{color:var(--ink);font-weight:500}
+.duo{display:grid;grid-template-columns:2.4fr 1fr;gap:14px;margin-top:56px}
+.duo .ph{max-height:520px}
+.charm{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;margin-top:96px;align-items:start}
+.charm h3{font-size:clamp(28px,3.6vw,44px);font-weight:200}
+.charm h3 em{font-style:normal;display:block;font-size:1.5em;color:var(--accent)}
+.charm .txt{display:grid;gap:18px;color:var(--muted);min-width:0}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
+.trio .ph{aspect-ratio:4/3}
+@media (max-width:860px){.loc-grid,.charm{grid-template-columns:1fr;gap:36px}.trio{grid-template-columns:1fr}.duo{grid-template-columns:1fr}.duo .ph:last-child{display:none}}
+
+/* view */
+.view-list{display:grid;gap:10px;margin:0;padding:0;list-style:none;max-width:40em}
+.view-list li{padding-left:18px;position:relative}
+.view-list li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.pills{display:grid;gap:8px;margin-top:36px;max-width:640px}
+.pill{background:var(--accent-deep);color:var(--bg);font-weight:500;font-size:16px;padding:12px 24px;border-radius:0 26px 0 26px}
+.pill:nth-child(2){margin-left:24px}.pill:nth-child(3){margin-left:48px}
+
+/* spatial scenes: one photo at a time, the camera eases forward into its depth */
+.scenes{height:calc(100svh + 7 * 85svh);padding:0;position:relative}
+.scenes-sticky{position:sticky;top:calc(60px + env(safe-area-inset-top,0px));height:calc(100svh - 60px);overflow:hidden;background:#0f0c12}
+.scenes-stage{position:absolute;inset:0}
+.scenes-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s}
+.scenes-stage img.on{opacity:1}
+.scenes-stage.live img{opacity:0!important}
+.scenes-sticky::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(10,7,13,.32),transparent 24%,transparent 62%,rgba(10,7,13,.45))}
+.scenes-top,.scene-cap{text-shadow:0 1px 12px rgba(0,0,0,.55),0 0 2px rgba(0,0,0,.35)}
+.scenes-top{position:absolute;z-index:2;top:28px;left:0;right:0;color:#fff}
+.scenes-top .wrap{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.scenes-top .label{color:#D9CDE5}
+.scenes-top h2{font-size:clamp(28px,3.6vw,44px);margin-top:8px}
+.scene-count{font-family:var(--f-label);font-size:15px;letter-spacing:.12em;font-variant-numeric:tabular-nums;opacity:.85;white-space:nowrap}
+.scene-cap{position:absolute;z-index:2;left:0;right:0;bottom:56px;color:#fff}
+.scene-cap .wrap{display:grid;gap:8px}
+.scene-cap .chips{display:flex;gap:8px;flex-wrap:wrap}
+.scene-cap .chip{font-size:12.5px;font-weight:500;padding:4px 11px;border:1px solid rgba(255,255,255,.55);border-radius:999px}
+.scene-cap .chip{background:rgba(255,255,255,.12);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.scene-cap .chip.u{background:rgba(255,255,255,.82);color:#1d1722;border-color:transparent;font-family:var(--f-label);letter-spacing:.06em;text-shadow:none}
+.scene-cap b{font-family:var(--f-display);font-weight:300;font-size:clamp(30px,4.6vw,56px);line-height:1.15}
+.scene-cap p{font-size:15px;opacity:.85;max-width:34em}
+.scene-cap.swap{animation:capin .7s ease both}
+@keyframes capin{from{transform:translateY(10px);opacity:.2}to{transform:none;opacity:1}}
+.scenes-bar{position:absolute;z-index:2;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:24px;display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.scenes-bar i{height:2px;background:rgba(255,255,255,.25);position:relative;overflow:hidden}
+.scenes-bar i::after{content:"";position:absolute;inset:0;background:#fff;transform-origin:left;transform:scaleX(var(--f,0))}
+@media (prefers-reduced-motion: reduce){
+  .scenes{height:auto}
+  .scenes-sticky{position:relative;top:0;height:min(80svh,720px)}
+}
+
+/* overview table */
+.ov{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+.ov p{color:var(--muted)}
+table{border-collapse:collapse;width:100%}
+.spec th,.spec td{padding:14px 18px;border-bottom:1px solid var(--line);text-align:left;font-weight:400}
+.spec th{width:38%;color:var(--muted);font-size:14px;font-weight:500}
+.spec td{font-variant-numeric:tabular-nums}
+.spec tr:first-child th,.spec tr:first-child td{border-top:1px solid var(--ink)}
+@media (max-width:860px){.ov{grid-template-columns:1fr;gap:32px}}
+
+/* units */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:40px;border-bottom:1px solid var(--line)}
+.tab{font-family:var(--f-label);font-size:clamp(22px,3vw,30px);font-weight:400;letter-spacing:.02em;background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);padding:6px 18px 12px;margin-bottom:-1px;cursor:pointer}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tab small{display:block;font-family:var(--f-body);font-size:12px;letter-spacing:0;font-weight:400}
+@media (max-width:600px){
+  .tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:start}
+  .tab{font-size:22px;padding:6px 2px 12px;text-align:center;min-width:0}
+  .tab small{font-size:10.5px;line-height:1.4;margin-top:4px}
+}
+.unit{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.unit-info{display:grid;gap:22px;min-width:0}
+.unit-name{font-family:var(--f-label);font-weight:500;font-size:clamp(64px,9vw,112px);line-height:.9;letter-spacing:-.02em;background:var(--ink);color:var(--bg);justify-self:start;padding:18px 44px 22px 30px;border-radius:0 64px 0 64px}
+.unit-meta{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:13px;font-weight:500;padding:5px 12px;border:1px solid var(--accent);color:var(--accent-deep);border-radius:999px}
+.unit .spec th{width:40%}
+.unit .spec td span{color:var(--muted);font-size:14px;margin-left:8px}
+.unit .spec tr.total th,.unit .spec tr.total td{color:var(--ink);font-weight:500}
+.price{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:18px 22px;background:var(--accent-soft);flex-wrap:wrap}
+.price span{font-size:14px;color:var(--muted)}
+.price b{font-family:var(--f-display);font-weight:300;font-size:28px;color:var(--accent-deep)}
+.plans{display:grid;gap:14px;min-width:0}
+.plan{background:var(--paper);position:relative;overflow:hidden}
+.plan img{width:100%}
+.plan canvas{mix-blend-mode:normal}
+.hot{position:absolute;z-index:2;transform:translate(-7px,-50%);display:flex;align-items:center;gap:6px;border:0;background:none;padding:0;cursor:pointer;font-family:inherit}
+.hot.flip{flex-direction:row-reverse;transform:translate(calc(-100% + 7px),-50%)}
+.hot.up{flex-direction:column-reverse;gap:4px;transform:translate(-50%,calc(-100% + 7px))}
+.hot.down{flex-direction:column;gap:4px;transform:translate(-50%,-7px)}
+.hot i{width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 30%,transparent);flex:none;animation:ping 2.4s ease-out infinite}
+.hot span{font-size:12.5px;font-weight:600;color:#241d2b;background:rgba(255,255,255,.78);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);padding:3px 9px;border-radius:999px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.hot.elev{cursor:default;z-index:3}
+.hot.elev i{background:var(--pink);box-shadow:0 0 0 4px color-mix(in srgb,var(--pink) 30%,transparent);animation:none}
+.hot.elev span{background:var(--pink);color:#fff}
+.hot:hover span,.hot:focus-visible span{background:var(--accent-deep);color:#fff}
+@keyframes ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 55%,transparent)}70%{box-shadow:0 0 0 12px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.plan-note{font-size:13px;color:var(--muted)}
+.gal-head{display:flex;align-items:baseline;gap:14px;margin:64px 0 16px;flex-wrap:wrap}
+.gal-head h3{font-size:22px}
+.gal-head span{font-size:13px;color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.gal button{padding:0;border:0;cursor:zoom-in;grid-column:span 2;aspect-ratio:4/3;font-family:inherit}
+.gal button.w{grid-column:span 6;aspect-ratio:21/8}
+.gal button.h{grid-column:span 3}
+.gal img{transition:transform .6s ease}
+.gal button:hover img{transform:scale(1.03)}
+@media (max-width:860px){.unit{grid-template-columns:1fr;gap:32px}.gal{grid-template-columns:1fr 1fr}.gal button,.gal button.h{grid-column:span 1}.gal button.w{grid-column:span 2;aspect-ratio:16/9}.hot span{font-size:11px;padding:2px 7px}}
+
+/* pricing */
+.price-wrap{overflow-x:auto}
+.ptable{min-width:620px}
+.ptable th,.ptable td{padding:18px 16px;text-align:center;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.ptable thead th{border-top:1px solid var(--ink);font-family:var(--f-label);font-weight:500;font-size:17px;letter-spacing:.03em}
+.ptable tbody th{font-weight:500;color:var(--muted);font-size:14px;text-align:left}
+.ptable .amt td{font-family:var(--f-display);font-size:22px;font-weight:300;color:var(--accent-deep)}
+.ptable td.na{font-family:var(--f-body);font-size:14px;color:var(--muted)}
+.note{font-size:13px;color:var(--muted);margin-top:14px}
+
+/* contact */
+.contact{background:var(--accent-deep);color:var(--bg);padding-block:0}
+.contact .inner{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;padding-block:96px;align-items:center}
+.contact .label{color:var(--accent-soft)}
+.contact h2{margin-top:16px}
+.tel{font-family:var(--f-label);font-weight:400;font-size:clamp(46px,7.4vw,92px);letter-spacing:.01em;line-height:1;margin:22px 0 26px;font-variant-numeric:tabular-nums;user-select:all}
+.tel a{text-decoration:none}
+.contact .btn{border-color:var(--bg);color:var(--bg)}
+.contact .btn.primary{background:var(--bg);color:var(--accent-deep)}
+.contact ul{margin:0;padding:0;list-style:none;display:grid;border-top:1px solid color-mix(in srgb,var(--bg) 35%,transparent)}
+.contact li{padding:16px 0;border-bottom:1px solid color-mix(in srgb,var(--bg) 35%,transparent);display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+.contact li span{opacity:.75;font-size:14px}
+.contact li b{font-weight:500}
+.copied{font-size:13px;opacity:.85;min-height:1.5em;margin-top:10px}
+@media (max-width:860px){.contact .inner{grid-template-columns:1fr}}
+
+footer{padding-block:40px 56px;font-size:12.5px;color:var(--muted);line-height:1.8}
+footer .wrap{display:grid;gap:10px}
+footer .brand{font-size:18px;color:var(--ink)}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:min(1400px,94vw);max-height:92vh}
+dialog::backdrop{background:rgba(12,9,15,.9)}
+dialog img{max-height:82vh;width:auto;margin:auto}
+dialog form{position:fixed;top:max(14px,env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px))}
+dialog .x{background:rgba(255,255,255,.14);color:#fff;border:0;width:44px;height:44px;border-radius:50%;font-size:22px;cursor:pointer}
+dialog p{color:#fff;font-size:16px;text-align:center;margin-top:12px;font-weight:500}
+dialog p small{display:block;font-size:13px;opacity:.7;font-weight:400}
+
+@media (max-width:860px){
+  .hero-stage{padding-block:48px 0}
+  .ridge-box{height:clamp(220px,64vw,340px)}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  section{padding-block:72px}
+  .head{justify-items:start;text-align:left}
+  .intro .prose{text-align:left;margin-left:0}
+  .scene-cap{bottom:48px}
+}
+@media (max-width:420px){.status{grid-template-columns:1fr}.status div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
+
+/* scroll reveal: text rises into place as it enters the screen; only armed once the script is running */
+.reveal-on .rv{opacity:0;transform:translateY(34px);filter:blur(4px);transition:opacity .9s ease var(--d,0s),transform 1.1s cubic-bezier(.2,.7,.2,1) var(--d,0s),filter .9s ease var(--d,0s)}
+.reveal-on .rv.in{opacity:1;transform:none;filter:none}
+.reveal-on h2.rv{transform:translateY(48px)}
+@media (prefers-reduced-motion: reduce){.reveal-on .rv{opacity:1;transform:none;filter:none;transition:none}}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="주요 메뉴">
+  <div class="wrap">
+    <a class="brand" href="#top">The <span class="han">潤</span><small>평창동 더윤</small></a>
+    <ul>
+      <li><a href="#nature">자연</a></li>
+      <li><a href="#location">입지</a></li>
+      <li><a href="#view">전망</a></li>
+      <li><a href="#spaces">공간</a></li>
+      <li><a href="#overview">건축개요</a></li>
+      <li><a href="#units">세대안내</a></li>
+      <li><a href="#price">분양가</a></li>
+    </ul>
+    <a class="call num" href="tel:025679090">☏ 02-567-9090</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-stage">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="label">A Private House in Pyeongchang-dong</div>
+        <h1 class="hero-title">The<span class="han">潤</span></h1>
+        <p class="hero-sub">평창동에서 만나는 프라이빗 럭셔리</p>
+      </div>
+      <div class="hero-side">
+        <dl class="status">
+          <div><dt>Status</dt><dd>준공 완료 · 즉시 입주</dd></div>
+          <div><dt>Limited</dt><dd>4세대 중 <em>2세대</em> 한정</dd></div>
+        </dl>
+        <p>종로구 평창동, 북한산 자락에 자리한 단 4세대의 프라이빗 레지던스. 건축주가 직접 설계하고 직접 분양합니다.</p>
+        <div class="btns">
+          <a class="btn primary" href="#units">세대 안내 보기</a>
+          <a class="btn" href="#contact">방문 예약 문의</a>
+        </div>
+      </div>
+    </div>
+    <div class="ridge-box"><canvas id="ridge" aria-hidden="true"></canvas></div>
+  </div>
+  <div class="band sp" data-img="hero_dusk.jpg" data-depth="d_hero_dusk.jpg" data-amt="1.2">
+    <img src="hero_dusk.jpg" alt="노을 진 하늘 아래 북한산 능선을 마주한 A-3 옥상 정원과 퍼걸러" fetchpriority="high">
+    <div class="place"><b>A-3 루프탑 정원</b><span>실제 사진 · 북한산 조망</span></div>
+  </div>
+</header>
+
+<section class="intro" id="nature">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">Nature</div>
+      <h2>북악산과 북한산이 품은<br>청정 자연</h2>
+    </div>
+    <div class="sun" aria-hidden="true"></div>
+    <div class="mount" role="img" aria-label="북한산 능선 일러스트"></div>
+    <div class="prose">
+      <p>평창동은 예로부터 배산임수(背山臨水)의 기운을 품은 대한민국 대표 전통 부촌이자, 자연과 예술이 공존하는 문화 예술의 중심지입니다.</p>
+      <p>평창동 더윤은 이러한 평창동만의 독보적인 가치를 일상에서 누릴 수 있는 최적의 입지에 자리합니다.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="facts">
+    <div class="fact"><b>준공 완료<br>즉시 입주</b><span>4세대 중 2세대 한정 분양</span></div>
+    <div class="fact"><b>도심 약 20분</b><span>시청 · 광화문 · 종로 · 명동</span></div>
+    <div class="fact"><b>학군 5~30분</b><span>예술고 · 명문대학 인접</span></div>
+    <div class="fact"><b>테라스 · 정원<br>루프탑 · 엘리베이터</b><span>세대별 전용 외부 공간</span></div>
+  </div>
+</div>
+
+<section id="location">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">Location</div>
+      <h2>평창동의 입지환경</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <span class="kicker">대한민국 문화·예술의 거점 (Art &amp; Culture Hub)</span>
+        <p>단지 주변은 도보 거리 내에 국내 정상급 미술관과 갤러리가 밀집해 있어, 걸어서 예술을 누리는 품격 있는 일상을 선사합니다.</p>
+        <ul>
+          <li><b>주요 미술관 및 문화 공간</b> — 가나아트센터, 김종영미술관, 서울시립 미술아카이브, 영인문학관, 수애뇨339 등 다수의 문화 거점 인접</li>
+          <li><b>명문 명품 학군</b> — 한국 예술 교육의 요람인 서울예술고등학교가 인근에 위치하여 풍부한 예술적 인프라와 교육 환경을 공유</li>
+        </ul>
+      </div>
+      <div class="loc-card">
+        <span class="kicker">도심 접근성과 생활 편의성 (Connectivity &amp; Life)</span>
+        <p>자연 속에 둘러싸여 있으면서도 광화문, 종로 등 서울 핵심 업무지구(CBD)로의 접근성이 뛰어납니다.</p>
+        <ul>
+          <li><b>편리한 교통망</b> — 북악터널 및 평창문화로를 통해 종로·광화문은 물론 강남권 및 외곽 진출입 용이</li>
+          <li><b>풍부한 생활 편의</b> — 인근 학산도서관, 고급 식당가(북악정 등), 롯데캐슬로잔 상권 등 생활 기반 인프라 완비</li>
+        </ul>
+      </div>
+    </div>
+    <div class="duo">
+      <figure class="ph"><img src="p03_x52.jpg" alt="북한산 아래 평창동 주택가 전경" loading="lazy"><figcaption><b>북한산 아래 평창동 주택가</b><small>실제 사진</small></figcaption></figure>
+      <figure class="ph"><img src="p03_x53.jpg" alt="더윤 외관 석재 디테일" loading="lazy"><figcaption><b>더윤 외관</b><small>실제 사진</small></figcaption></figure>
+    </div>
+
+    <div class="charm">
+      <h3>거리 곳곳에 머무는<br>대체 불가의 매력<em>평창동</em></h3>
+      <div class="txt">
+        <p>평창동은 서울의 대표적인 부촌으로 꼽힙니다. 번화한 큰길 대신 북한산 자락을 따라 넉넉한 주택들이 이어지고, 언덕을 오르내리는 길마다 동네만의 분위기가 쌓여 있습니다.</p>
+        <p>웅장한 주택들이 동네의 풍경을 만들고, 붐비지 않아 여유롭습니다. 거리 어디서나 북한산 능선이 보이고, 골목 곳곳의 미술관과 갤러리가 산책을 특별한 시간으로 바꿔 줍니다.</p>
+      </div>
+    </div>
+    <div class="trio">
+      <figure class="ph"><img src="p12_x103.jpg" alt="A-2 테라스에서 내려다본 평창동 골목" loading="lazy"><figcaption><b>A-2 테라스에서 본 평창동 골목</b><small>실제 사진</small></figcaption></figure>
+      <figure class="ph"><img src="p16_x121.jpg" alt="A-3 루프탑에서 본 평창동과 북한산" loading="lazy"><figcaption><b>A-3 루프탑에서 본 평창동</b><small>실제 사진</small></figcaption></figure>
+      <figure class="ph"><img src="p05_x62.jpg" alt="옥상 정원 퍼걸러와 북한산" loading="lazy"><figcaption><b>옥상 정원과 북한산 능선</b><small>실제 사진</small></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="view" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="head left">
+      <div class="label">Panorama</div>
+      <h2>4계절 파노라마 뷰</h2>
+    </div>
+    <ul class="view-list">
+      <li>북악산과 북한산 능선이 감싸 안은 지형</li>
+      <li>거실과 테라스에서 매일 산세의 사계절 풍경을 눈에 담는 힐링 라이프</li>
+      <li>도심 속 숲세권 단지로 높은 녹지율과 맑은 공기, 조용하고 프라이빗한 주거 분위기</li>
+    </ul>
+    <div class="pills">
+      <div class="pill">예술적 영감으로 가득한 문화 거점</div>
+      <div class="pill">북한산이 품은 압도적 자연경관</div>
+      <div class="pill">일상에 스며드는 감성적 여유</div>
+    </div>
+  </div>
+  <div class="band rev sp" data-img="p20_x140.jpg" data-depth="d_p20_x140.jpg">
+    <img src="p20_x140.jpg" alt="B-1 세대에서 바라본 평창동과 북한산 전경" loading="lazy">
+    <div class="place"><b>B-1 테라스 조망</b><span>실제 사진 · 평창동과 북한산</span></div>
+  </div>
+</section>
+
+<section class="scenes" id="spaces" aria-label="공간 둘러보기">
+  <div class="scenes-sticky">
+    <div class="scenes-stage" id="scenes-stage"></div>
+    <div class="scenes-top">
+      <div class="wrap">
+        <div><div class="label">Spaces</div><h2>공간 둘러보기</h2></div>
+        <div class="scene-count" id="scene-count">01 / 07</div>
+      </div>
+    </div>
+    <div class="scene-cap" id="scene-cap"></div>
+    <div class="scenes-bar" id="scenes-bar" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section id="overview">
+  <div class="wrap ov">
+    <div class="loc-card">
+      <div class="label">Overview</div>
+      <h2 style="margin:14px 0 22px">건축개요</h2>
+      <p>북한산 자락의 완만한 능선을 따라 형성된 정갈한 주택가, 깊고 차분한 공기 속에서 시간조차 천천히 흐르는 듯한 곳. 고즈넉한 문화 구역인 평창동은 도심의 소음과 단절된 독립된 휴식과 정서적 풍요를 선사합니다.</p>
+    </div>
+    <table class="spec">
+      <tr><th>대지면적</th><td>654㎡ (198평)</td></tr>
+      <tr><th>용도지역</th><td>제1종 전용주거지역</td></tr>
+      <tr><th>건축면적</th><td>293.96㎡ (89평)</td></tr>
+      <tr><th>총연면적</th><td>1,117.18㎡ (338평)</td></tr>
+      <tr><th>건축규모</th><td>지상 2층 / 지하 2층</td></tr>
+      <tr><th>세대수</th><td>총 4세대 (A동 3세대 · B동 1세대)</td></tr>
+      <tr><th>설계</th><td>건축주 직접설계 · KNOT ARCHITECTS</td></tr>
+    </table>
+  </div>
+  <div class="band sp" style="margin-top:72px" data-img="p06_x70.jpg" data-depth="d_p06_x70.jpg">
+    <img src="p06_x70.jpg" alt="더윤 A동과 B동 외관 투시도" loading="lazy">
+    <div class="place"><b>더윤 A동 · B동 외관</b><span>외관 투시도</span></div>
+  </div>
+</section>
+
+<section id="units">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">Residences</div>
+      <h2>세대 안내</h2>
+      <p class="lead">세대마다 테라스와 마당(루프탑), 전용 주차를 갖춘 단독형 구성입니다.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="세대 타입"></div>
+    <div id="unit-panel" role="tabpanel"></div>
+  </div>
+</section>
+
+<section id="price" style="padding-top:24px">
+  <div class="wrap">
+    <div class="head left">
+      <div class="label">Price</div>
+      <h2>분양가격 안내</h2>
+    </div>
+    <div class="price-wrap">
+      <table class="ptable">
+        <thead><tr><th scope="col" style="text-align:left;font-family:var(--f-body);font-size:14px;color:var(--muted)">구분</th><th>A동 1</th><th>A동 2</th><th>A동 3</th><th>B동 1</th></tr></thead>
+        <tbody>
+          <tr><th>전용면적</th><td>202.116㎡</td><td>181.256㎡</td><td>206.85㎡</td><td>219.537㎡</td></tr>
+          <tr><th>총사용면적</th><td>304.462㎡</td><td>252.430㎡</td><td>422.66㎡</td><td>310.942㎡</td></tr>
+          <tr><th>평수(전용)</th><td>61.14평</td><td>54.83평</td><td>62.57평</td><td>66.41평</td></tr>
+          <tr><th>구조</th><td>방3 · 욕실3 · 주차3</td><td>방3 · 욕실3 · 주차2</td><td>방3 · 욕실3 · 주차4</td><td>방4 · 욕실3 · 주차3</td></tr>
+          <tr class="amt"><th>분양가</th><td>30억 9천만원</td><td>23억 4천만원</td><td>35억 3천만원</td><td>27억 4천만원</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">면적과 가격은 사정에 따라 변경될 수 있습니다. 세대별 잔여 여부는 전화로 확인해 주세요.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap inner">
+    <div>
+      <div class="label">Visit &amp; Inquiry</div>
+      <h2>사전 예약 후<br>하우스 방문 가능</h2>
+      <div class="tel"><a href="tel:025679090">02-567-9090</a></div>
+      <div class="btns">
+        <a class="btn primary" href="tel:025679090">전화 걸기</a>
+        <button class="btn" type="button" id="copy-tel">번호 복사</button>
+      </div>
+      <p class="copied" id="copy-msg" aria-live="polite"></p>
+    </div>
+    <ul>
+      <li><span>분양 방식</span><b>건축주 직접설계 &amp; 직접분양</b></li>
+      <li><span>설계</span><b>김아론 건축사 · KNOT ARCHITECTS</b></li>
+      <li><span>위치</span><b>서울특별시 종로구 평창동</b></li>
+      <li><span>세대</span><b>총 4세대 · 준공 완료</b></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">The <span class="han">潤</span></span>
+    <p>평창동 더윤 · 서울특별시 종로구 평창동 · 문의 02-567-9090</p>
+    <p>본 페이지의 투시도와 이미지는 이해를 돕기 위한 것으로 실제와 차이가 있을 수 있으며, 면적·가격 등은 관계 사정에 따라 변경될 수 있습니다.</p>
+  </div>
+</footer>
+
+<dialog id="lb" aria-label="이미지 크게 보기">
+  <form method="dialog"><button class="x" aria-label="닫기">×</button></form>
+  <img id="lb-img" alt="">
+  <p id="lb-cap"></p>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const UNITS = [
+  { id:'a1', name:'A-1', floors:'1F · 2F 복층', rooms:'방3 · 욕실3', parking:'3대', price:'30억 9천만원',
+    rows:[['내부 면적','202.16㎡','61.14평'],['테라스','35.34㎡','10.69평'],['마당 (루프탑)','66.99㎡','20.26평'],['합계','304.49㎡','92.10평']],
+    plans:[{ k:'p07_x73', hots:[[60,34,'1F 주방','p09_x83','실제 사진'],[66,45,'1F 다이닝','p08_x78','투시도'],[71,55,'1F 거실','p08_x79','투시도'],[84,64,'1F 테라스','p09_x86','실제 사진'],[29,67,'2F 침실','p08_x80','투시도']] }],
+    renders:[['p08_x78','w','거실 · 주방'],['p08_x79','h','거실'],['p08_x80','h','침실 · 욕실']],
+    photos:[['p09_x83','w','주방 아일랜드'],['p09_x84','','주방'],['p09_x85','','드레스룸'],['p09_x86','','1F 테라스'],['p09_x87','','주방 전경']] },
+  { id:'a2', name:'A-2', floors:'1F · 2F 복층', rooms:'방3 · 욕실3', parking:'2대', price:'23억 4천만원',
+    rows:[['내부 면적','181.26㎡','54.83평'],['테라스','45.03㎡','13.62평'],['마당 (루프탑)','26.14㎡','7.9평'],['합계','252.43㎡','76.36평']],
+    plans:[{ k:'p10_x95', hots:[[28,49,'2F 다이닝','p11_x99','투시도'],[34,56,'2F 주방','p12_x104','실제 사진'],[25,63,'2F 거실','p11_x98','투시도'],[46,77,'2F 테라스','p12_x103','실제 사진'],[88,55,'1F 테라스','p12_x105','실제 사진']] }],
+    renders:[['p11_x98','w','거실 · 주방'],['p11_x99','w','다이닝 · 욕실']],
+    photos:[['p12_x103','w','테라스 조망'],['p12_x104','h','주방'],['p12_x105','h','테라스']] },
+  { id:'a3', name:'A-3', floors:'1F · 루프탑', rooms:'방3 · 욕실3', parking:'4대', price:'35억 3천만원',
+    rows:[['내부 면적','206.85㎡','62.57평'],['테라스','5.4㎡','1.63평'],['마당 (루프탑)','210.41㎡','63.64평'],['합계','422.66㎡','127.85평']],
+    plans:[{ k:'p13_x108', hots:[[25,26,'루프탑 정원','p16_x120','실제 사진'],[78,65,'거실','p14_x112','실제 사진'],[71,74,'다이닝','p15_x116','실제 사진'],[63,82,'주방','p15_x117','실제 사진'],[41,46,'침실','p14_x111','투시도'],[64,47,'드레스룸','p15_x115','실제 사진']] }],
+    renders:[['p14_x111','w','침실']],
+    photos:[['p14_x112','w','거실 · 다이닝 조망'],['p15_x115','w','드레스룸'],['p15_x116','h','거실'],['p15_x117','h','주방'],['p16_x120','w','루프탑 정원'],['p16_x121','h','루프탑 조망'],['p16_x122','h','루프탑 퍼걸러']] },
+  { id:'b1', name:'B-1', floors:'1F · 2F · 3F · 루프탑', rooms:'방4 · 욕실3', parking:'2+1대', price:'27억 4천만원', extra:'단독형 승강기',
+    rows:[['내부 면적','219.54㎡','66.41평'],['테라스','39.49㎡','11.94평'],['마당 (루프탑)','51.92㎡','15.7평'],['합계','310.95㎡','94.06평']],
+    plans:[{ k:'p17_x125', hots:[[79,48,'1F 거실','p19_x134','실제 사진','l'],[74,36,'1F 다이닝','p19_x135','실제 사진','l'],[70,25,'1F 주방','p19_x136','실제 사진'],[47,20,'1F 테라스','p20_x141','실제 사진'],[26,63,'2F 욕실','p19_x137','실제 사진']], elev:[[89,33,'down'],[41,44]] },
+           { k:'p17_x126', hots:[[80,46,'루프탑','p20_x142','실제 사진']], elev:[[38,27]] }],
+    renders:[['p18_x129','w','거실 · 주방'],['p18_x130','w','다이닝 · 주방'],['p18_x131','w','현관 · 계단실']],
+    photos:[['p19_x134','w','거실'],['p19_x135','h','다이닝'],['p19_x136','h','주방'],['p19_x137','h','욕실'],['p20_x141','h','테라스'],['p20_x140','w','테라스 조망'],['p20_x142','w','루프탑']] }
+];
+
+const SCENES = [
+  { k:'p14_x112', unit:'A-3', place:'거실과 다이닝', note:'통창 너머로 북한산 능선이 이어지는 거실' },
+  { k:'p09_x83', unit:'A-1', place:'주방 아일랜드', note:'원목 바닥과 길게 이어진 아일랜드 주방' },
+  { k:'p12_x103', unit:'A-2', place:'테라스', note:'평창동 골목과 북한산을 내려다보는 전용 테라스' },
+  { k:'p15_x115', unit:'A-3', place:'드레스룸', note:'간접 조명을 두른 워크인 드레스룸' },
+  { k:'p19_x134', unit:'B-1', place:'거실', note:'테라스로 열리는 넓은 거실' },
+  { k:'p20_x141', unit:'B-1', place:'1F 테라스', note:'석재 바닥을 깐 프라이빗 테라스' },
+  { k:'p16_x122', unit:'A-3', place:'루프탑 퍼걸러', note:'산을 바라보며 쉬어 가는 옥상 퍼걸러' }
+];
+
+const PAD = .07;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const tabs = document.querySelector('.tabs');
+const panel = document.getElementById('unit-panel');
+const lb = document.getElementById('lb'), lbImg = document.getElementById('lb-img'), lbCap = document.getElementById('lb-cap');
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function openLB(src, title, sub) {
+  lbImg.src = src; lbImg.alt = title;
+  lbCap.innerHTML = `${esc(title)}<small>${esc(sub || '')}</small>`;
+  lb.showModal();
+}
+lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+
+UNITS.forEach(u => {
+  const b = document.createElement('button');
+  b.className = 'tab'; b.type = 'button'; b.role = 'tab'; b.id = 'tab-' + u.id;
+  b.setAttribute('aria-controls', 'unit-panel');
+  b.innerHTML = `${u.name}<small>${esc(u.floors)}</small>`;
+  b.addEventListener('click', () => show(u.id, true));
+  tabs.appendChild(b);
+});
+
+function tiles(u, list, kind) {
+  return list.map(([k, cls, cap]) =>
+    `<button type="button" class="ph ${cls}" data-src="${k}.jpg" data-title="${u.name} · ${esc(cap)}" data-sub="${kind}"><img src="${k}.jpg" alt="${u.name} ${esc(cap)} ${kind}" loading="lazy"><span class="lab"><b>${esc(cap)}</b><small>${u.name} · ${kind}</small></span></button>`).join('');
+}
+
+function show(id, fromClick) {
+  const u = UNITS.find(x => x.id === id) || UNITS[0];
+  tabs.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', t.id === 'tab-' + u.id));
+  panel.setAttribute('aria-labelledby', 'tab-' + u.id);
+  const meta = [u.rooms, '주차 ' + u.parking, u.extra].filter(Boolean).map(m => `<span class="tag">${esc(m)}</span>`).join('');
+  const rows = u.rows.map(([k, m, p], i) =>
+    `<tr${i === u.rows.length - 1 ? ' class="total"' : ''}><th>${k}</th><td>${m}<span>${p}</span></td></tr>`).join('');
+  // plan images carry a PAD margin on every side, so positions measured on the bare drawing are remapped
+  const at = (x, y) => `left:${((x / 100 + PAD) / (1 + 2 * PAD) * 100).toFixed(2)}%;top:${((y / 100 + PAD) / (1 + 2 * PAD) * 100).toFixed(2)}%`;
+  const plans = u.plans.map(p => `
+    <div class="plan sp" data-img="${p.k}.jpg" data-depth="d_${p.k}.jpg" data-kind="plan">
+      <img src="${p.k}.jpg" alt="${u.name} 입체 평면도">
+      ${p.hots.map(([x, y, label, k, kind, dir]) => `<button type="button" class="hot${dir === 'l' || x > 82 ? ' flip' : ''}" style="${at(x, y)}" data-src="${k}.jpg" data-title="${u.name} · ${esc(label)}" data-sub="${kind}"><i></i><span>${esc(label)}</span></button>`).join('')}
+      ${(p.elev || []).map(([x, y, dir]) => `<span class="hot elev${dir ? ' ' + dir : x > 82 ? ' flip' : ''}" style="${at(x, y)}"><i></i><span>단독형 승강기</span></span>`).join('')}
+    </div>`).join('');
+  panel.innerHTML = `
+    <div class="unit">
+      <div class="unit-info">
+        <div class="unit-name">${u.name}</div>
+        <div class="unit-meta">${meta}</div>
+        <table class="spec num">${rows}<tr><th>주차대수</th><td>${u.parking}</td></tr></table>
+        <div class="price"><span>분양가</span><b>${u.price}</b></div>
+      </div>
+      <div class="plans">${plans}<p class="plan-note">평면도의 점을 누르면 그 공간의 사진이 열립니다. 마우스를 움직이면 평면도를 입체적으로 들여다볼 수 있습니다.</p></div>
+    </div>
+    <div class="gal-head"><h3>인테리어 투시도</h3></div>
+    <div class="gal">${tiles(u, u.renders, '투시도')}</div>
+    <div class="gal-head"><h3>실제 사진</h3><span>준공 후 촬영</span></div>
+    <div class="gal">${tiles(u, u.photos, '실제 사진')}</div>`;
+  panel.querySelectorAll('.sp').forEach(watch);
+  if (fromClick) { try { history.replaceState(null, '', '#' + u.id); } catch (e) {} }
+}
+
+panel.addEventListener('click', e => {
+  const b = e.target.closest('[data-src]');
+  if (b) openLB(b.dataset.src, b.dataset.title, b.dataset.sub);
+});
+
+document.getElementById('copy-tel').addEventListener('click', () => {
+  const msg = document.getElementById('copy-msg');
+  const done = () => msg.textContent = '전화번호를 복사했습니다: 02-567-9090';
+  const fallback = () => {
+    const r = document.createRange(); r.selectNodeContents(document.querySelector('.tel'));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+    msg.textContent = '번호를 선택했습니다. 복사해서 사용해 주세요.';
+  };
+  try { navigator.clipboard.writeText('02-567-9090').then(done, fallback); } catch (e) { fallback(); }
+});
+
+/* ---------- spatial photos: each pixel is shifted by its depth, so near objects move against far ones ---------- */
+const VS = 'attribute vec2 a;varying vec2 v;void main(){v=vec2(a.x*.5+.5,.5-a.y*.5);gl_Position=vec4(a,0.,1.);}';
+const FS = `precision mediump float;varying vec2 v;
+uniform sampler2D i0,d0,i1,d1;uniform vec2 c0,c1,off;uniform float z0,z1,mx,focus;
+vec4 samp(sampler2D im,sampler2D dp,vec2 cv,float z){
+  vec2 uv=(v-.5)*cv+.5;vec2 p=uv;
+  for(int k=0;k<6;k++){float d=texture2D(dp,p).r;p=(uv-.5)/(1.+z*d)+.5+off*(d-focus);}
+  return texture2D(im,clamp(p,.001,.999));
+}
+void main(){vec4 a=samp(i0,d0,c0,z0);if(mx>.001)a=mix(a,samp(i1,d1,c1,z1),mx);gl_FragColor=a;}`;
+
+function makeGL(canvas) {
+  const gl = canvas.getContext('webgl', { antialias: false, alpha: false, preserveDrawingBuffer: false });
+  if (!gl) return null;
+  const sh = (t, s) => { const o = gl.createShader(t); gl.shaderSource(o, s); gl.compileShader(o); return o; };
+  const pr = gl.createProgram();
+  gl.attachShader(pr, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, FS)); gl.linkProgram(pr);
+  if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) return null;
+  gl.useProgram(pr);
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1]), gl.STATIC_DRAW);
+  const a = gl.getAttribLocation(pr, 'a'); gl.enableVertexAttribArray(a); gl.vertexAttribPointer(a, 2, gl.FLOAT, false, 0, 0);
+  const U = {};
+  ['i0', 'd0', 'i1', 'd1', 'c0', 'c1', 'off', 'z0', 'z1', 'mx', 'focus'].forEach(n => U[n] = gl.getUniformLocation(pr, n));
+  gl.uniform1i(U.i0, 0); gl.uniform1i(U.d0, 1); gl.uniform1i(U.i1, 2); gl.uniform1i(U.d1, 3);
+  return { gl, U };
+}
+function loadTex(gl, src) {
+  return new Promise((res, rej) => {
+    const im = new Image();
+    im.onload = () => {
+      const t = gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D, t);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, im);
+      res({ t, w: im.naturalWidth, h: im.naturalHeight });
+    };
+    im.onerror = rej; im.src = src;
+  });
+}
+function coverScale(cw, ch, iw, ih, over) {
+  const ac = cw / ch, ai = iw / ih;
+  return ac > ai ? [over, over * ai / ac] : [over * ac / ai, over];
+}
+function bind(gl, unit, tex) { gl.activeTexture(gl.TEXTURE0 + unit); gl.bindTexture(gl.TEXTURE_2D, tex); }
+function fitCanvas(c) {
+  const r = c.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1, 2);
+  const w = Math.round(r.width * dpr), h = Math.round(r.height * dpr);
+  if (c.width !== w || c.height !== h) { c.width = w; c.height = h; }
+  return r;
+}
+
+let tx = 0, ty = 0, px = 0, py = 0;
+addEventListener('pointermove', e => { tx = e.clientX / innerWidth - .5; ty = e.clientY / innerHeight - .5; }, { passive: true });
+// phones have no hover: the finger position while scrolling steers the view, and every motion runs larger
+const touch = matchMedia('(pointer: coarse)').matches;
+const K = touch ? 2.4 : 1;
+addEventListener('touchmove', e => { const p = e.touches[0]; if (p) { tx = p.clientX / innerWidth - .5; ty = p.clientY / innerHeight - .5; } }, { passive: true });
+addEventListener('touchend', () => { tx = 0; ty = 0; }, { passive: true });
+
+const live = new Set();
+const io = new IntersectionObserver(entries => entries.forEach(e => {
+  const s = e.target._sp;
+  if (!s) return;
+  s.visible = e.isIntersecting;
+  if (e.isIntersecting && !s.ctx) start(s);
+  if (!e.isIntersecting && s.ctx) stop(s);
+}), { rootMargin: '300px 0px' });
+
+function watch(host) {
+  if (reduce || host._sp) return;
+  host._sp = { host, kind: host.dataset.kind || 'look', amt: +(host.dataset.amt || 1), seed: Math.random() * 6.28 };
+  io.observe(host);
+}
+async function start(s) {
+  const c = document.createElement('canvas'); c.setAttribute('aria-hidden', 'true');
+  s.host.insertBefore(c, s.host.querySelector('.place, .hot, .elev') || null);
+  const ctx = makeGL(c);
+  if (!ctx) { c.remove(); return; }
+  s.ctx = ctx; s.canvas = c;
+  try {
+    const [im, dp] = await Promise.all([loadTex(ctx.gl, s.host.dataset.img), loadTex(ctx.gl, s.host.dataset.depth)]);
+    if (s.ctx !== ctx) return;
+    s.im = im; s.dp = dp;
+    s.host.classList.add('live');
+    live.add(s);
+  } catch (e) { stop(s); }
+}
+function stop(s) {
+  live.delete(s);
+  s.host.classList.remove('live');
+  if (s.ctx) { const ext = s.ctx.gl.getExtension('WEBGL_lose_context'); if (ext) ext.loseContext(); }
+  if (s.canvas) s.canvas.remove();
+  s.ctx = s.canvas = s.im = s.dp = null;
+}
+function drawLook(s, t) {
+  const { gl, U } = s.ctx, r = fitCanvas(s.canvas);
+  gl.viewport(0, 0, s.canvas.width, s.canvas.height);
+  const plan = s.kind === 'plan';
+  // where the photo sits on screen: 0 entering at the bottom, 1 leaving at the top
+  const q = Math.min(1, Math.max(0, (innerHeight - r.top) / (innerHeight + r.height)));
+  const a = s.amt * (plan ? 1.5 : 1);
+  const ox = (px * .045 + Math.sin(t * .45 + s.seed) * .012 * K) * a;
+  const oy = (py * .03 + Math.cos(t * .33 + s.seed) * .008 * K) * a + (plan ? 0 : (q - .5) * .03 * K * a);
+  gl.uniform2f(U.off, ox, oy);
+  gl.uniform2fv(U.c0, coverScale(r.width, r.height, s.im.w, s.im.h, plan ? 1 : touch ? .86 : .9));
+  gl.uniform1f(U.z0, plan ? .02 : (.04 + q * .08) * (touch ? 1.8 : 1));
+  gl.uniform1f(U.focus, plan ? .5 : .35);
+  gl.uniform1f(U.mx, 0);
+  bind(gl, 0, s.im.t); bind(gl, 1, s.dp.t); bind(gl, 2, s.im.t); bind(gl, 3, s.dp.t);
+  gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+}
+
+/* scenes: one shared canvas; scroll moves the camera forward into the current photo, then crossfades to the next */
+const sc = { sec: document.getElementById('spaces'), stage: document.getElementById('scenes-stage'), idx: -1, tex: [] };
+sc.stage.innerHTML = SCENES.map((s, i) => `<img src="${s.k}.jpg" alt="${s.unit} ${esc(s.place)}" class="${i ? '' : 'on'}" loading="${i ? 'lazy' : 'eager'}">`).join('');
+document.getElementById('scenes-bar').innerHTML = SCENES.map(() => '<i></i>').join('');
+const capEl = document.getElementById('scene-cap'), countEl = document.getElementById('scene-count');
+const bars = [...document.querySelectorAll('#scenes-bar i')];
+function sceneCaption(i) {
+  const s = SCENES[i];
+  capEl.innerHTML = `<div class="wrap"><div class="chips"><span class="chip u">${s.unit}</span><span class="chip">실제 사진</span></div><b>${esc(s.place)}</b><p>${esc(s.note)}</p></div>`;
+  capEl.classList.remove('swap'); void capEl.offsetWidth; capEl.classList.add('swap');
+  countEl.textContent = String(i + 1).padStart(2, '0') + ' / ' + String(SCENES.length).padStart(2, '0');
+  sc.stage.querySelectorAll('img').forEach((im, k) => im.classList.toggle('on', k === i));
+}
+function sceneProgress() {
+  const r = sc.sec.getBoundingClientRect();
+  const run = sc.sec.offsetHeight - sc.stage.parentElement.offsetHeight;
+  const p = Math.min(.9999, Math.max(0, -r.top / Math.max(1, run)));
+  const f = p * SCENES.length, i = Math.floor(f);
+  return { i, f: f - i, visible: r.bottom > 0 && r.top < innerHeight };
+}
+async function startScenes() {
+  const c = document.createElement('canvas'); c.setAttribute('aria-hidden', 'true');
+  sc.stage.appendChild(c);
+  const ctx = makeGL(c);
+  if (!ctx) { c.remove(); return; }
+  sc.ctx = ctx; sc.canvas = c;
+  try {
+    sc.tex = await Promise.all(SCENES.map(s => Promise.all([loadTex(ctx.gl, `${s.k}.jpg`), loadTex(ctx.gl, `d_${s.k}.jpg`)])));
+    sc.stage.classList.add('live'); c.style.cssText = 'position:absolute;inset:0;width:100%;height:100%';
+  } catch (e) { c.remove(); sc.ctx = null; }
+}
+const ease = x => x * x * (3 - 2 * x);
+function drawScenes(t) {
+  const { i, f, visible } = sceneProgress();
+  if (i !== sc.idx) { sc.idx = i; sceneCaption(i); }
+  bars.forEach((b, k) => b.style.setProperty('--f', k < i ? 1 : k === i ? f.toFixed(3) : 0));
+  if (!sc.ctx || !sc.tex.length || !visible) return;
+  const { gl, U } = sc.ctx, r = fitCanvas(sc.canvas);
+  gl.viewport(0, 0, sc.canvas.width, sc.canvas.height);
+  const j = Math.min(SCENES.length - 1, i + 1);
+  const fade = j === i ? 0 : ease(Math.min(1, Math.max(0, (f - .8) / .2)));
+  // forward dolly: near pixels magnify faster than far ones, so the room opens around the viewer
+  gl.uniform1f(U.z0, ease(f) * (touch ? .3 : .2));
+  gl.uniform1f(U.z1, 0);
+  gl.uniform2f(U.off, px * .02 + Math.sin(t * .3) * .006 * K, py * .014 - ease(f) * .012 * (touch ? 1.8 : 1));
+  gl.uniform1f(U.focus, .3);
+  gl.uniform1f(U.mx, fade);
+  gl.uniform2fv(U.c0, coverScale(r.width, r.height, sc.tex[i][0].w, sc.tex[i][0].h, .92));
+  gl.uniform2fv(U.c1, coverScale(r.width, r.height, sc.tex[j][0].w, sc.tex[j][0].h, .92));
+  bind(gl, 0, sc.tex[i][0].t); bind(gl, 1, sc.tex[i][1].t); bind(gl, 2, sc.tex[j][0].t); bind(gl, 3, sc.tex[j][1].t);
+  gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+}
+
+document.querySelectorAll('.sp').forEach(watch);
+const start0 = (location.hash || '').slice(1);
+show(UNITS.some(u => u.id === start0) ? start0 : 'a1');
+if (UNITS.some(u => u.id === start0)) document.getElementById('units').scrollIntoView();
+sceneCaption(0); sc.idx = 0;
+
+if (!reduce) {
+  new IntersectionObserver(([e]) => { if (e.isIntersecting && !sc.ctx) startScenes(); }, { rootMargin: '400px 0px' }).observe(sc.sec);
+  const t0 = performance.now();
+  (function loop(now) {
+    const t = (now - t0) / 1000;
+    px += (tx - px) * .05; py += (ty - py) * .05;
+    live.forEach(s => { if (s.visible) drawLook(s, t); });
+    drawScenes(t);
+    requestAnimationFrame(loop);
+  })(t0);
+} else {
+  addEventListener('scroll', () => { const { i } = sceneProgress(); if (i !== sc.idx) { sc.idx = i; sceneCaption(i); } }, { passive: true });
+}
+
+/* ---------- scroll reveal: siblings follow each other with a short stagger ---------- */
+(function reveal() {
+  if (reduce || !('IntersectionObserver' in window)) return;
+  const sel = ['.head > *', '.intro .sun', '.intro .mount', '.intro .prose p', '.fact', '#location .loc-card > *', '.duo .ph',
+    '.charm h3', '.charm .txt p', '.trio .ph', '.view-list li', '.pill', '.ov .loc-card > *', '.ov .spec',
+    '.tabs', '#unit-panel', '.price-wrap', '#price .note', '.contact .inner > div > *', '.contact li', 'footer .wrap > *'];
+  const els = [...document.querySelectorAll(sel.join(','))];
+  const order = new Map();
+  els.forEach(el => {
+    const n = order.get(el.parentElement) || 0;
+    order.set(el.parentElement, n + 1);
+    el.style.setProperty('--d', Math.min(n, 5) * .09 + 's');
+    el.classList.add('rv');
+  });
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { rootMargin: '0px 0px -8% 0px', threshold: .12 });
+  document.documentElement.classList.add('reveal-on');
+  els.forEach(el => io.observe(el));
+})();
+
+/* ---------- hero: 북악산·북한산 as engraved contour ridges; each row hides the rows behind it ---------- */
+(function ridge() {
+  const cv = document.getElementById('ridge');
+  if (!cv || !window.THREE) return;
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({ canvas: cv, antialias: true, alpha: true }); } catch (e) { return; }
+  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+  const scene = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(30, 1, .1, 400);
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+  const rnd = (x, z) => { const s = Math.sin(x * 127.1 + z * 311.7) * 43758.5453; return s - Math.floor(s); };
+  const noise = (x, z) => {
+    const xi = Math.floor(x), zi = Math.floor(z), xf = x - xi, zf = z - zi;
+    const u = xf * xf * (3 - 2 * xf), v = zf * zf * (3 - 2 * zf);
+    const a = rnd(xi, zi), b = rnd(xi + 1, zi), c = rnd(xi, zi + 1), d = rnd(xi + 1, zi + 1);
+    return a + (b - a) * u + (c - a) * v + (a - b - c + d) * u * v;
+  };
+  // ridged fractal noise: sharp crests and creased valleys
+  const ridged = (x, z) => { let s = 0, a = 1, f = 1; for (let i = 0; i < 5; i++) { const n = 1 - Math.abs(noise(x * f, z * f) * 2 - 1); s += a * n * n; a *= .5; f *= 2.05; } return s; };
+  // 북악산 on the left, the taller 북한산 massif with its granite peaks on the right, foothills toward the viewer
+  const height = (x, z) => {
+    const back = Math.min(1, Math.max(0, (8 - z) / 60));
+    const massif = 30 * Math.exp(-((x - 16) ** 2) / 300) + 17 * Math.exp(-((x + 22) ** 2) / 180) + 4;
+    return back * back * massif * (.45 + .55 * ridged(x * .05, z * .05)) + ridged(x * .16, z * .16) * 1.6 * (.3 + back);
+  };
+
+  const small = innerWidth < 700;
+  const ROWS = small ? 34 : 58, STEP = small ? .9 : .5;
+  const lineMat = new THREE.LineBasicMaterial({ transparent: true });
+  const fillMat = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });
+  for (let i = 0; i < ROWS; i++) {
+    const z = -70 + i * (78 / ROWS);
+    const line = [], fill = [], idx = [];
+    for (let x = -90; x <= 90; x += STEP) {
+      const y = height(x, z);
+      line.push(x, y, z);
+      fill.push(x, y, z, x, -10, z);
+    }
+    for (let k = 0; k < fill.length / 6 - 1; k++) { const a = k * 2; idx.push(a, a + 1, a + 2, a + 1, a + 3, a + 2); }
+    const lg = new THREE.BufferGeometry(); lg.setAttribute('position', new THREE.Float32BufferAttribute(line, 3));
+    const fg = new THREE.BufferGeometry(); fg.setAttribute('position', new THREE.Float32BufferAttribute(fill, 3)); fg.setIndex(idx);
+    scene.add(new THREE.Mesh(fg, fillMat), new THREE.Line(lg, lineMat));
+  }
+  const sun = new THREE.Mesh(new THREE.CircleGeometry(2.6, 48), new THREE.MeshBasicMaterial({ fog: false }));
+  sun.position.set(-30, 36, -90);
+  scene.add(sun);
+
+  const paint = () => {
+    const bg = new THREE.Color(css('--bg'));
+    lineMat.color = new THREE.Color(css('--accent'));
+    fillMat.color = bg;
+    sun.material.color = new THREE.Color(css('--accent-deep'));
+    scene.fog = new THREE.Fog(bg, 60, 170);
+  };
+
+  let running = false;
+  const t0 = performance.now();
+  const size = () => {
+    const r = cv.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    renderer.setSize(r.width, r.height, false);
+    cam.aspect = r.width / r.height;
+    cam.updateProjectionMatrix();
+  };
+  const frame = now => {
+    const t = (now - t0) / 1000;
+    // low camera looking up at the peaks, slowly gliding along the range
+    // camera stands well back, nearly level: the highest peak sits just under the top of the ridge box
+    cam.position.set(Math.sin(t * .06) * 10 + px * 8, 6 + py * 1.2, 62);
+    cam.lookAt(px * 3 + Math.sin(t * .06) * 4, 15, -40);
+    renderer.render(scene, cam);
+    if (running) requestAnimationFrame(frame);
+  };
+  const still = () => { if (!running) frame(performance.now()); };
+
+  paint(); size(); frame(t0);
+  if (!reduce) {
+    new IntersectionObserver(([e]) => {
+      const was = running; running = e.isIntersecting;
+      if (running && !was) requestAnimationFrame(frame);
+    }).observe(cv);
+  }
+  new ResizeObserver(() => { size(); still(); }).observe(cv);
+  const repaint = () => { paint(); still(); };
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', repaint);
+  new MutationObserver(repaint).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+})();
+</script>
+
+</body>
+</html>
